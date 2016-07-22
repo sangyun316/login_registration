@@ -1,0 +1,12 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+	</head>
+	<body>
+		<h1>Success! Welcome, {{ session['first_name'] }}!</h1>
+		<h3>Successfully registered!</h3>
+		<form action="/logout" method="GET">
+			<input type="submit" name="logout" value="Log out">
+		</form>
+	</body>
+</html>

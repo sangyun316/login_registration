@@ -1,8 +1,3 @@
-"""
-    Routes Configuration File
-
-    Put Routing rules here
-"""
 from system.core.router import routes
 
 """
@@ -16,7 +11,12 @@ from system.core.router import routes
     named id the automatically generated url would be '/products/add/<id>'
     The automatically generated routes respond to all of the http verbs (GET, POST, PUT, PATCH, DELETE)
 """
-routes['default_controller'] = 'Welcome'
+routes['default_controller'] = 'Registrations'
+routes['POST']['/register'] = 'Registrations#register'
+routes['POST']['/login'] = 'Registrations#login'
+routes['GET']['/success'] = 'Registrations#success'
+routes['GET']['/logout'] = 'Registrations#logout'
+
 """
     You can add routes and specify their handlers as follows:
 
